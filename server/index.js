@@ -18,11 +18,11 @@ const openai = new OpenAI({
 app.get('/generate-lineup', async (req, res) => {
     try {
       const completion = await openai.chat.completions.create({
-        // "gpt-4o-mini" from docs, going to use "gpt-3.5-turbo" for fewer quota restrictions at the moment
-        model: "gpt-3.5-turbo",
+        // "gpt-4o-mini" from docs, can use "gpt-3.5-turbo" for fewer quota restrictions at the moment
+        model: "gpt-4o",
         messages: [
           { role: "system", content: "You are a helpful assistant." },
-          { role: "user", content: "Provide the best possible NHL 18 man lineup." },
+          { role: "user", content: "Provide the best possible NHL 18 man lineup based on current NHL rosters." },
         ],
       });
   
