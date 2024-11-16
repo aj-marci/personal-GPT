@@ -1,4 +1,4 @@
 # personal-GPT
 building personal-GPT with various OpenAI APIs
 
-Node / Express backend and TypeScript / React frontend
+Node.js / Express backend with TypeScript / React frontend
