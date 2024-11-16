@@ -4,7 +4,9 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const openAIKey = process.env.OPEN_AI_KEY
 const OpenAI = require('openai');
+const cors = require('cors');
 
+app.use(cors());
 
 // middleware to parse JSON data
 app.use(express.json());
