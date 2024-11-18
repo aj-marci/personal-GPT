@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 const App = () => {
 
   const [lineup, setLineup] = useState<string | null>(null);
+  const [prompt, setPrompt] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchLineup = async () => {
@@ -20,7 +21,7 @@ const App = () => {
         }
 
         const result = await response.json();
-        setLineup(result.message); // Extract the lineup message from the response
+        setLineup(result.message); // set response state
       } catch (error) {
         console.error("Error fetching lineup:", error);
       }
@@ -29,10 +30,15 @@ const App = () => {
     fetchLineup();
   }, []);
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPrompt(event.target.value); // storing input value as the prompt
+  };
+
 
   return (
     <div>
-      <h2>NHL 18-Man Lineup:</h2>
+      <h2>Input prompt here</h2>
+        <input type='text'></input>
       <p>{lineup ? lineup : "Loading lineup..."}</p>
     </div>
   );
