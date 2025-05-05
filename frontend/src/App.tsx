@@ -51,7 +51,7 @@ const App = () => {
         justifyContent: 'space-between',
         alignItems: 'center',
         height: '100vh',
-        backgroundColor: '#1e1e2c', // Dark grey background
+        backgroundColor: '#1e1e2c', 
         color: '#fff',
         padding: '20px',
         fontFamily: 'Arial, sans-serif',
