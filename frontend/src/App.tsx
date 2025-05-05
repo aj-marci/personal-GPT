@@ -57,7 +57,7 @@ const App = () => {
         fontFamily: 'Arial, sans-serif',
       }}
     >
-      <h2 style={{ color: '#a78bfa' }}>Chat with AI</h2>
+      <h2 style={{ color: '#a78bfa' }}>AJ's AI Chatbot</h2>
 
       <div
         style={{
