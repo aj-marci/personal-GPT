@@ -113,7 +113,7 @@ const App = () => {
                 textAlign: 'left',
               }}
             >
-              Generating response...
+              Generating response... Forgive me, I'm learning!
             </div>
           </div>
         )}
