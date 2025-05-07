@@ -153,7 +153,7 @@ const App = () => {
             fontWeight: 'bold',
           }}
         >
-          Send
+          Submit
         </button>
       </div>
     </div>
