@@ -3,21 +3,21 @@ import React, { useState } from 'react';
 const App = () => {
   const [response, setResponse] = useState<string | null>(null);
   const [prompt, setPrompt] = useState<string>('');
-  const [showResponse, setShowResponse] = useState<boolean>(false); // Track if the response should be displayed
-  const [chatHistory, setChatHistory] = useState<{ role: string; message: string }[]>([]); // Store conversation history
+  const [showResponse, setShowResponse] = useState<boolean>(false); 
+  const [chatHistory, setChatHistory] = useState<{ role: string; message: string }[]>([]); 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPrompt(e.target.value);
   };
 
   const handleSubmit = async () => {
-    if (!prompt.trim()) return; // Prevent empty submissions
+    if (!prompt.trim()) return;
 
-    // Update chat history with user prompt
+  
     setChatHistory((prev) => [...prev, { role: 'user', message: prompt }]);
     setShowResponse(true);
-    setResponse(null); // Reset response for a new fetch
-    setPrompt(''); // Clear input field
+    setResponse(null); 
+    setPrompt(''); 
 
     try {
       const response = await fetch('http://localhost:8000/generate-response', {
@@ -153,7 +153,7 @@ const App = () => {
             fontWeight: 'bold',
           }}
         >
-          Send
+          Submit
         </button>
       </div>
     </div>
