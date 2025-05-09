@@ -35,7 +35,6 @@ const App = () => {
       const result = await response.json();
       const message = result.message;
 
-      // Update chat history with AI response
       setChatHistory((prev) => [...prev, { role: 'assistant', message }]);
       setResponse(message);
     } catch (error) {
