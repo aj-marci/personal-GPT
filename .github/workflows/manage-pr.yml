@@ -10,12 +10,20 @@ on:
         required: true
         description: "Details about the action and general context (blueprint, run id, etc...)"
         type: string
+      labels:
+        description: 'Labels from the PR'
+        required: false
+        type: string
 
 jobs:
   manage-pr:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Print PR labels
+        run: |
+          echo "Labels: ${{ inputs.labels }}"
+          
       - name: Inform starting of deletion
         uses: port-labs/port-github-action@v1
         with:
