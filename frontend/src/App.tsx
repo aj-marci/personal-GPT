@@ -64,7 +64,7 @@ const App = () => {
           flex: 1,
           width: '100%',
           maxWidth: '600px',
-          backgroundColor: '#2c2c3d',
+          backgroundColor: '##F7F7F7',
           borderRadius: '10px',
           overflowY: 'auto',
           padding: '10px',
