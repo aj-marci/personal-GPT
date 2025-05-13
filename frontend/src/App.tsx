@@ -57,7 +57,8 @@ const App = () => {
       }}
     >
       <h2 style={{ color: '#a78bfa' }}>AJ's AI Chatbot</h2>
-      <h2 style={{ color: '#a78bfa' }}>TypeScript/React/OpenAI API</h2>
+      <h2 style={{ color: '#a78bfa' }}>TypeScript/React/OpenAI</h2>
+      <h2 style={{ color: '#a78bfa' }}>Developed with care</h2>
 
       <div
         style={{
