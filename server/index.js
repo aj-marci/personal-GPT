@@ -17,7 +17,7 @@ const openai = new OpenAI({
 // route for generating responses
 app.post('/generate-response', async (req, res) => {
   try {
-    const { prompt } = req.body; // extract the prompt from the request body
+    const { prompt } = req.body; 
 
     if (!prompt) {
       return res.status(400).json({ error: 'Prompt is required.' });
